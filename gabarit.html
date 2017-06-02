@@ -3,35 +3,22 @@
 <head>
     <title>Email</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style type="text/css">
-            body{
-            width:100% !important;
-            -webkit-text-size-adjust:none;
-            margin:0;
-            padding:0;
-        }
-        img{
-            border:none;
-            font-size:14px;
-            font-weight:bold;
-            height:auto;
-            line-height:100%;
-            outline:none;
-            text-decoration:none;
-            text-transform:capitalize;
-        }
-        #backgroundTable{
-            width:100% !important;
-            height:100% !important;
-            margin:0;
-            padding:0;
-        }
-        #monkeyRewards img{
-            max-width:160px;
-        }
-        #outlook a{
-            padding:0;
-        }
+        #monkeyRewards img{max-width:160px;}
+        #outlook a{padding:0;} /* Force Outlook to provide a "view in browser" message */
+        .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail to display emails at full width */
+        .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing */
+
+        body{width:100% !important; -webkit-text-size-adjust:none; -ms-text-size-adjust:100%; margin:0; padding:0;} /* Prevent WebKit and Windows mobile changing default text sizes */
+        body, #bodyTable{background-color:#DEE0E2;}
+        body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;}
+        body, table, td, p, a, li, blockquote{-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;} /* Prevent WebKit and Windows mobile changing default text sizes */
+        img {outline:none; height:auto; line-height:100%; outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;}
+        a img {border:none;}
+        p {margin: 1em 0;}
+        table {border-collapse:collapse !important; mso-table-lspace:0pt; mso-table-rspace:0pt;}
+        table td {border-collapse: collapse;}
 
         @media only screen and (max-width: 480px) {
             td[class="dblock"],
@@ -56,26 +43,58 @@
                 max-width:100%;
                 height: auto;
             }
+
+            a[href^="tel"], a[href^="sms"] {
+                color: black;
+                text-decoration: none; pointer-events: none; cursor: default;
+            }
+
+            .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+                color: blue !important;
+                text-decoration: default; pointer-events: auto; cursor: default;
+            }
+        }
+
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+            a[href^="tel"], a[href^="sms"] {
+                color: black;
+                text-decoration: none; pointer-events: none; cursor: default;
+            }
+
+            .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+                color: blue !important;
+                text-decoration: default; pointer-events: auto; cursor: default;
+            }
         }
     </style>
 </head>
 
-<body>
-    <table class="dblock" cellpadding="0" cellspacing="0" width="600" align="center">
-        <tr>
-            <td class="dblock" align="center">
-                <div style="font-size: 12px; line-height: 1;">&nbsp;</div>
-                <div style="font-size: 12px; font-family: Arial, sans-serif; color: #010101;">
-                    Si ce message ne s&rsquo;affiche pas correctement, vous pouvez le visualiser gr&acirc;ce &agrave; <a href="#">ce lien</a>
-                </div>
-                <div style="font-size: 12px; line-height: 1;">&nbsp;</div>
-            </td>
-        </tr>
-
-        <tr>
-            <td class="dblock">
-                <img src="img/gab1.png" alt="" style="border: none;" />
-            </td>
-        </tr>
+<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+    <center>
+        <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
+            <tr>
+                <td align="center" valign="top" id="bodyCell">
+                <!-- BEGIN TEMPLATE // -->
+                    <table id="templateContainer" border="0" cellpadding="0" cellspacing="0" bgcolor="white">
+                        <tr>
+                            <td class="dblock" align="center" valign="top">
+                                <div style="font-size: 12px; line-height: 1;">&nbsp;</div>
+                                <div style="font-size: 12px; font-family: Arial, sans-serif; color: #010101;">
+                                    Si ce message ne s&rsquo;affiche pas correctement, vous pouvez le visualiser gr&acirc;ce &agrave; <a href="#">ce lien</a>
+                                </div>
+                                <div style="font-size: 12px; line-height: 1;">&nbsp;</div>
+                            </td>
+                        </tr>   
+                        <tr>
+                            <td class="dblock">
+                                <img src="img/gab1.png" alt="" style="border: none;" />
+                            </td>
+                        </tr>
+                    </table>
+                <!-- END TEMPLATE // -->
+                </td>
+            </tr>
+        </table>
+    </center>
 </body>
 </html>
