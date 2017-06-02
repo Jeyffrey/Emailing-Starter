@@ -1,0 +1,17 @@
+{
+  "name": "emailing-starter",
+  "version": "1.0.0",
+  "author": "Jeyffrey",
+  "description": "Script lancement serveur de Dev Actis Tour",
+  "scripts": {
+    "dev": "browser-sync start --server './' --index 'gabarit.html' --files '*.html'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jeyffrey/Emailing-Starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Jeyffrey/Emailing-Starter/issues"
+  },
+  "homepage": "https://github.com/Jeyffrey/Emailing-Starter#readme"
+}
