@@ -1,5 +1,5 @@
 # Emailing Starter
-[Browsersync](https://browsersync.io/) is necessary (global install it globally and go !)
+[Browsersync](https://browsersync.io/) is necessary (install it globally and go !)
 
 ## Build Setup
 
